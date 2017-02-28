@@ -22,6 +22,7 @@ sub numberOfDays
 
 my $dir = shift // '.';
 my $total = 0;
+my $delim = "\t";
  
 opendir my $dh, $dir or die "Could not open '$dir' for reading '$!'\n";
 my @things = grep {$_ ne '.' and $_ ne '..' and /^walk.*\.txt$/} readdir $dh;
@@ -38,10 +39,10 @@ foreach my $thing (@things) {
        if($row =~/(\d+\.?\d*)\s+Mile.*/)
        {
            my $walk = $1;
-           print "$day\/$month\/$year,";
+           print "$day\/$month\/$year$delim";
            print $walk;
            $total += $walk;
-           say ",$total";
+           say "$delim$total";
        }
        
    }
