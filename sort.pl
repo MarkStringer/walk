@@ -39,8 +39,9 @@ foreach my $thing (@things) {
        {
            my $walk = $1;
            print "$day\/$month\/$year,";
-           say $walk;
+           print $walk;
            $total += $walk;
+           say ",$total";
        }
        
    }
