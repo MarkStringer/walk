@@ -1,70 +1,254 @@
-08/01/2017,2.2
-09/01/2017,2.5
-09/01/2017,1.3
-10/01/2017,1
-10/01/2017,1
-11/01/2017,1
-11/01/2017,1
-13/01/2017,1
-13/01/2017,1
-16/01/2017,1
-17/01/2017,1
-17/01/2017,1
-18/01/2017,1
-18/01/2017,1
-19/01/2017,1
-19/01/2017,2.5
-19/01/2017,1.5
-20/01/2017,1
-20/01/2017,1
-20/01/2017,1.5
-23/01/2017,1
-23/01/2017,1
-23/01/2017,1.5
-23/01/2017,1
-24/01/2017,1
-24/01/2017,1.5
-24/01/2017,1.5
-24/01/2017,1
-26/01/2017,1
-26/01/2017,1
-27/01/2017,1
-27/01/2017,1.5
-27/01/2017,1
-30/01/2017,1
-31/01/2017,2
-31/01/2017,2
-01/02/2017,1
-01/02/2017,2.5
-01/02/2017,1
-04/02/2017,2
-04/02/2017,3.5
-05/02/2017,4
-05/02/2017,1.5
-06/02/2017,2
-07/02/2017,2.4
-08/02/2017,1
-08/02/2017,1
-09/02/2017,1
-10/02/2017,1.5
-11/02/2017,3
-11/02/2017,1
-11/02/2017,2
-12/02/2017,3.5
-12/02/2017,1.5
-13/02/2017,1
-15/02/2017,2
-16/02/2017,5
-17/02/2017,1
-17/02/2017,1
-17/02/2017,2.5
-21/02/2017,2.4
-21/02/2017,2.6
-22/02/2017,2.3
-22/02/2017,2.8
-23/02/2017,2.5
-23/02/2017,2.3
-24/02/2017,1.8
-25/02/2017,3
-26/02/2017,4.5
-27/02/2017,1
+  PID TTY          TIME CMD
+    1 ?        00:00:01 init
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:04 ksoftirqd/0
+    7 ?        00:00:57 rcu_preempt
+    8 ?        00:00:00 rcu_sched
+    9 ?        00:00:00 rcu_bh
+   10 ?        00:00:01 migration/0
+   11 ?        00:00:02 watchdog/0
+   12 ?        00:00:03 watchdog/1
+   13 ?        00:00:01 migration/1
+   14 ?        00:00:02 ksoftirqd/1
+   17 ?        00:00:02 watchdog/2
+   18 ?        00:00:01 migration/2
+   19 ?        00:00:02 ksoftirqd/2
+   22 ?        00:00:03 watchdog/3
+   23 ?        00:00:01 migration/3
+   24 ?        00:00:01 ksoftirqd/3
+   27 ?        00:00:00 khelper
+   28 ?        00:00:00 kdevtmpfs
+   29 ?        00:00:00 netns
+   30 ?        00:00:00 writeback
+   31 ?        00:00:00 bioset
+   32 ?        00:00:00 kblockd
+   33 ?        00:00:00 khubd
+   34 ?        00:00:00 devfreq_wq
+   35 ?        00:08:04 cfinteractive
+   46 ?        00:00:00 khungtaskd
+   47 ?        00:01:10 kswapd0
+   48 ?        00:00:00 fsnotify_mark
+   49 ?        00:00:03 ecryptfs-kthrea
+   50 ?        00:00:00 crypto
+   62 ?        00:03:50 spi0
+   69 ?        00:00:05 spi2
+   81 ?        00:00:00 irq/196-rk808
+   84 ?        00:00:00 irq/41-ff9a0000
+   85 ?        00:00:00 irq/42-ff9a0000
+   87 ?        00:00:00 dwc2
+   88 ?        00:00:00 irq/69-rockchip
+   89 ?        00:00:00 dm_bufio_cache
+   90 ?        00:00:31 irq/423-cros_ec
+   91 ?        00:00:00 irq/421-ff0c000
+   94 ?        00:00:00 dwc2
+   95 ?        00:00:00 system
+   96 ?        00:00:00 carveout
+   97 ?        00:00:00 chunk
+   98 ?        00:00:00 binder
+   99 ?        00:00:00 irq/195-TS3A227
+  100 ?        00:00:00 irq/391-max9809
+  101 ?        00:00:00 ipv6_addrconf
+  114 ?        00:00:00 deferwq
+  115 ?        00:00:08 irq/48-ff940000
+  116 ?        00:00:00 irq/47-ff930000
+  117 ?        00:00:00 irq/135-ff98000
+  119 ?        00:00:00 kbase_job_fault
+  123 ?        00:01:51 irq/419-i2c_tou
+  125 ?        00:00:00 kdmflush
+  126 ?        00:03:39 mmcqd/0
+  127 ?        00:00:00 mmcqd/0boot0
+  128 ?        00:00:00 mmcqd/0boot1
+  129 ?        00:00:00 mmcqd/0rpmb
+  130 ?        00:00:00 bioset
+  131 ?        00:00:00 kverityd
+  132 ?        00:00:00 bioset
+  134 ?        00:00:00 ext4-rsv-conver
+  148 ?        00:00:01 udevd
+  150 ?        00:00:01 kworker/3:1H
+  237 ?        00:00:07 jbd2/mmcblk0p1-
+  238 ?        00:00:00 ext4-rsv-conver
+  246 ?        00:00:00 jbd2/mmcblk0p8-
+  247 ?        00:00:00 ext4-rsv-conver
+  252 ?        00:00:38 frecon
+  267 ?        00:00:10 loop0
+  271 ?        00:00:00 kdmflush
+  284 ?        00:00:00 bioset
+  285 ?        00:00:00 kcryptd_io
+  286 ?        00:00:00 kcryptd
+  287 ?        00:00:00 bioset
+  291 ?        00:00:00 jbd2/dm-1-8
+  292 ?        00:00:00 ext4-rsv-conver
+  301 ?        00:00:00 frecon <defunct>
+  393 ?        00:00:28 rsyslogd
+  440 ?        00:00:44 dbus-daemon
+  473 ttyS2    00:00:00 agetty
+  530 ?        00:00:14 wpa_supplicant
+  783 ?        00:00:00 minijail-init
+  805 ?        00:00:02 session_manager
+  820 ?        00:00:03 daisydog
+  838 ?        00:00:48 powerd
+  868 ?        01:32:37 chrome
+  869 ?        00:00:00 debugd
+  873 ?        00:00:00 tcsd
+  878 ?        00:00:01 chapsd
+ 1069 ?        00:00:00 firewalld
+ 1073 ?        00:00:00 permission_brok
+ 1077 ?        00:00:00 chrome
+ 1079 ?        00:00:00 cfg80211
+ 1082 ?        00:00:00 cryptohomed
+ 1104 ?        00:03:16 shill
+ 1105 ?        00:00:00 logger
+ 1120 ?        00:00:00 nacl_helper_boo
+ 1131 ?        00:00:00 nacl_helper_non
+ 1137 ?        00:00:01 chrome
+ 1162 ?        00:27:59 chrome
+ 1196 ?        00:00:00 chrome
+ 1200 ?        00:00:00 kbase_event
+ 1307 ?        00:00:00 periodic_schedu
+ 1315 ?        00:00:00 periodic_schedu
+ 1321 ?        00:00:00 minijail0
+ 1332 ?        00:00:00 mtpd
+ 1335 ?        00:00:00 periodic_schedu
+ 1365 ?        00:00:00 minijail0
+ 1368 ?        00:00:00 minijail0
+ 1380 ?        00:00:00 bluetoothd
+ 1387 ?        00:02:15 cras
+ 1392 ?        00:00:33 metrics_daemon
+ 1395 ?        00:00:00 minijail0
+ 1398 ?        00:00:02 conntrackd
+ 1399 ?        00:00:00 ModemManager
+ 1409 ?        00:00:07 disks
+ 1425 ?        00:00:01 kworker/0:1
+ 1429 ?        00:00:00 upstart-socket-
+ 1448 ?        00:00:07 avahi-daemon
+ 1452 ?        00:00:00 avahi-daemon
+ 1476 ?        00:00:00 brcmf_wq
+ 1480 ?        00:00:24 brcmf_watchdog
+ 1486 ?        00:00:00 brcm_patchram_p
+ 1508 ?        00:01:10 ksdioirqd/mmc2
+ 1619 ?        00:00:56 update_engine
+ 1926 ?        00:00:00 hci0
+ 1928 ?        00:00:00 hci0
+ 2034 ?        00:00:00 warn_collector
+ 2072 ?        00:00:00 sh
+ 2128 ?        00:00:00 arc_camera_serv
+ 2144 ?        00:00:00 loop1
+ 2169 ?        00:00:00 tlsdated
+ 2170 ?        00:00:00 logger
+ 2174 ?        00:00:00 periodic_schedu
+ 2185 ?        00:00:00 tlsdated-setter
+ 2246 ?        00:00:00 loop2
+ 2251 ?        00:00:00 krfcommd
+ 2267 ?        00:00:00 loop3
+ 2273 ?        00:00:00 loop4
+ 2281 ?        00:00:00 loop5
+ 2443 ?        00:09:26 chrome
+ 2451 ?        00:02:21 chrome
+ 2457 ?        00:36:50 chrome
+ 2482 ?        00:27:51 chrome
+ 2764 ?        00:00:04 chrome
+ 2921 ?        00:00:00 nacl_helper_boo
+ 2971 ?        00:00:04 chrome
+ 4130 ?        00:00:00 kauditd
+ 4652 ?        00:00:01 kworker/u8:15
+ 4653 ?        00:00:01 kworker/u8:16
+ 4654 ?        00:00:00 kworker/u8:18
+ 4656 ?        00:00:00 kworker/u8:20
+ 4659 ?        00:00:00 kworker/0:0
+ 4890 ?        00:00:00 dhcpcd
+ 5322 ?        00:00:00 kworker/1:0H
+ 6893 ?        00:00:00 kworker/u8:0
+ 7177 ?        00:00:00 kworker/0:1H
+ 7652 ?        00:00:00 tumblerd
+ 7824 ?        00:00:00 sleep
+ 7844 ?        00:00:00 kworker/3:0H
+ 7891 ?        00:00:00 kworker/2:2H
+ 8003 ?        00:00:00 sleep
+ 8014 ?        00:00:14 chrome
+ 8016 ?        00:00:00 sleep
+ 8131 ?        00:00:00 sleep
+ 8250 ?        00:00:00 sleep
+ 8269 ?        00:00:00 sleep
+ 8272 pts/3    00:00:00 ps
+ 9377 pts/2    00:00:00 bash
+ 9389 pts/2    01:04:04 firefox
+12808 pts/3    00:00:00 bash
+14370 ?        00:00:03 chrome
+14382 ?        00:00:02 nacl_helper_boo
+16610 ?        00:00:00 nacl_helper_boo
+17536 ?        00:00:00 kworker/2:0
+17537 ?        00:00:45 chrome
+17550 pts/0    00:00:00 bash
+17557 ?        00:00:01 kworker/3:2
+17640 pts/0    00:00:00 bash
+17642 pts/0    00:00:00 bash
+17939 ?        00:31:22 chrome
+19061 ?        00:00:00 easy_unlock
+19130 ?        00:00:07 kworker/u9:0
+19348 ?        00:00:14 kworker/u9:2
+19482 ?        00:00:00 kworker/1:1H
+21388 ?        00:00:01 kworker/2:2
+21587 ?        00:00:00 kworker/1:1
+24363 ?        00:00:00 kworker/3:1
+24385 ?        00:00:09 mono
+25204 ?        00:00:00 kworker/1:0
+25418 ?        00:00:00 kworker/0:0H
+25515 ?        00:03:22 chrome
+25622 pts/0    00:00:00 sudo
+25653 pts/0    00:00:00 sh
+25909 ?        00:00:01 dbus-daemon
+25924 ?        00:00:00 systemd-logind
+25944 pts/0    00:00:00 su
+25945 ?        00:00:00 xinit
+25949 ?        00:09:23 Xorg
+26009 ?        00:00:00 croutonxinitrc-
+26018 ?        00:00:02 croutonpowerd
+26019 ?        00:00:00 croutontriggerd
+26031 ?        00:00:05 croutontriggerd
+26032 ?        00:00:00 croutontriggerd
+26036 ?        00:00:00 mawk
+26037 ?        00:00:01 hexdump
+26038 ?        00:00:00 hexdump
+26039 ?        00:00:00 hexdump
+26040 ?        00:00:00 hexdump
+26041 ?        00:00:03 hexdump
+26048 ?        00:00:00 xbindkeys
+26053 ?        00:00:00 xinitrc
+26063 ?        00:00:02 xfce4-session
+26066 ?        00:00:00 dbus-launch
+26067 ?        00:00:04 dbus-daemon
+26070 ?        00:00:00 polkitd
+26075 ?        00:00:00 xfconfd
+26079 ?        00:00:00 ssh-agent
+26080 ?        00:00:13 xfwm4
+26082 ?        00:00:00 Thunar
+26083 ?        00:00:30 xfce4-panel
+26085 ?        00:00:06 xfdesktop
+26086 ?        00:00:01 xfsettingsd
+26088 ?        00:00:08 upowerd
+26095 ?        00:00:39 xfce4-terminal
+26099 ?        00:00:00 gvfsd
+26108 ?        00:00:07 xfce4-power-man
+26125 ?        00:00:01 panel-6-systray
+26127 ?        00:00:00 panel-2-actions
+26133 ?        00:00:00 gvfs-udisks2-vo
+26136 ?        00:00:00 udisksd
+26145 ?        00:00:00 gnome-pty-helpe
+26151 ?        00:00:07 xscreensaver
+26193 ?        00:00:04 zeitgeist-datah
+26203 ?        00:00:00 polkit-gnome-au
+26221 ?        00:00:08 pulseaudio
+26227 ?        00:00:02 zeitgeist-daemo
+26230 ?        00:00:00 at-spi-bus-laun
+26234 ?        00:00:00 rtkit-daemon
+26243 ?        00:00:03 zeitgeist-fts
+26259 ?        00:00:00 xfce4-volumed
+26263 ?        00:00:02 gvfsd-trash
+26264 ?        00:00:00 cat
+26268 ?        00:00:00 dbus-daemon
+26280 ?        00:00:00 at-spi2-registr
+26303 ?        00:00:00 gconfd-2
+26764 ?        00:00:00 dconf-service
+27843 ?        00:00:00 gvfsd-metadata
+31863 ?        00:00:31 syndaemon
+32665 ?        00:00:00 kworker/2:1H
