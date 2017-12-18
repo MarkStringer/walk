@@ -8,11 +8,24 @@ use Exporter;
 our @ISA    = qw(Exporter);
 our @EXPORT = qw(numberOfDays isLeapYear numberOfDaysIncremental);
 my @days = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
 sub numberOfDays
 {
     my $thing = pop;
+    print "$thing ";
     $thing =~ /walk(\d\d)(\d\d)(\d\d\d\d).*/ || return 0;
-    numberOfDaysIncremental("01010001", "$1$2$3");
+    ##my $returnValue  = numberOfDaysIncremental("01010001", "$1$2$3");
+    my $day = $1;
+    my $month = $2;
+    my $year = $3; 
+    my $daysInPastMonths;
+    $daysInPastMonths = 0;
+    foreach my $i (0..$month)
+    {
+       $daysInPastMonths = $daysInPastMonths + $days[$i];
+    }
+
+    return $daysInPastMonths + $day + ($year *365);
 }
 sub numberOfDaysIncremental
 {

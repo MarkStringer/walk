@@ -1,6 +1,9 @@
 use Days;
-use Test::Simple tests => 10;
+use Test::Simple tests => 11;
 
+my @array_a = sort {numberOfDays($a) <=> numberOfDays($b)} ("walk22011969.txt", "walk22031969.txt", "walk22021969.txt");
+my @array_b = qw(walk22011969.txt walk22021969.txt walk22031969.txt);
+ok((@array_a~~@array_b)==1, "Test sort");
 
 ok(numberOfDays("walk22012017.txt")== 736350, "Count Days");
 ok(isLeapYear(2000)==1, "Leap year 2000 true");
