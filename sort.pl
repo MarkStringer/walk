@@ -6,6 +6,7 @@ use Days ;
 my $dir = shift // '.';
 my $total = 0;
 my $delim = "\t";
+
  
 opendir my $dh, $dir or die "Could not open '$dir' for reading '$!'\n";
 my @things = grep {$_ ne '.' and $_ ne '..' and /^walk.*\.txt$/} readdir $dh;
