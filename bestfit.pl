@@ -1,5 +1,7 @@
 use strict;
 use warnings;
+use Days;
+use Fit;
 
 sub mean
 {
@@ -25,13 +27,15 @@ my @x_values;
 my @y_values;
  
 my $filename = pop;
-open(my $fh, '<:encoding(UTF-8)', $filename)
-  or die "Could not open file '$filename' $!";
+my @numbers = getNumbersFromFile($filename);
+
+print @numbers;
+
  
 # Read in two columns of numbers
-while (my $row = <$fh>) {
+foreach my $row (@numbers){
 
-$row =~ /(\d+),(\d+)/;
+$row =~ /(\d+)\s+(\d+)/ || die "Can't parse the numbers";
 my $current_x = $1;
 push @x_values, $current_x;
 my $current_y = $2;
@@ -71,3 +75,13 @@ print "So the gradient is $m\n";
 my $offset = $y_average - ($m * $x_average);
 
 print "And the offset is $offset\n";
+
+foreach my $pair (@numbers)
+{
+    $pair=~ /(\d+)\s+(\d+)/ || die "couldn't parse this line";
+    my $x = $1;
+    my $y = applyFormula($m, $x, $offset);
+
+    print dateFromDays("01011900",$x)." ".$y."\n";
+ 
+}

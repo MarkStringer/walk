@@ -6,36 +6,25 @@ use 5.010;
 
 use Exporter;
 our @ISA    = qw(Exporter);
-our @EXPORT = qw(numberOfDays isLeapYear numberOfDaysIncremental);
+our @EXPORT = qw(numberOfDays isLeapYear numberOfDaysIncremental dateFromDays);
 my @days = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
 sub numberOfDays
 {
     my $thing = pop;
-    print "$thing ";
-    $thing =~ /walk(\d\d)(\d\d)(\d\d\d\d).*/ || return 0;
-    ##my $returnValue  = numberOfDaysIncremental("01010001", "$1$2$3");
-    my $day = $1;
-    my $month = $2;
-    my $year = $3; 
-    my $daysInPastMonths;
-    $daysInPastMonths = 0;
-    foreach my $i (0..$month)
-    {
-       $daysInPastMonths = $daysInPastMonths + $days[$i];
-    }
-
-    return $daysInPastMonths + $day + ($year *365);
+    $thing =~ /walk(\d\d)(\d\d)(\d\d\d\d).*/ || die "File not in right format $thing";
+    my $returnValue  = numberOfDaysIncremental("01012016", "$1$2$3");    
+    return $returnValue;
 }
 sub numberOfDaysIncremental
 {
     my $secondDate = pop;
     my $firstDate = pop;
-    $firstDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || return 0;
+    $firstDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || die "Can't parse first date";
     my $firstDay = $1;
     my $firstMonth = $2;
     my $firstYear = $3;
-    $secondDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || return 0;
+    $secondDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || die "Can't parse second date";
     my $secondDay = $1;
     my $secondMonth = $2;
     my $secondYear = $3;
@@ -59,6 +48,34 @@ sub numberOfDaysIncremental
 }
 return $counter;
 
+}
+
+sub dateFromDays
+{
+        my$counter = pop;
+	my$firstDate = pop;
+    	$firstDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || return 0;
+   	my $firstDay = $1;
+    	my $firstMonth = $2;
+    	my $firstYear = $3;
+        while($counter)
+	{
+        	$counter--;
+        	$firstDay++;
+        	if ($firstDay > ($days[$firstMonth-1] + (($firstMonth==2) && isLeapYear($firstYear))))
+        	{
+                	$firstDay = 1;
+                	$firstMonth++;
+        	}
+        	if ($firstMonth == 13)
+        	{
+           		$firstMonth = 1;
+           		$firstYear++;
+        	}
+	}	
+    	my $returnString = sprintf("%02d%02d%02d",$firstDay,$firstMonth,$firstYear);
+    
+        return $returnString;
 }
 
 sub isLeapYear
