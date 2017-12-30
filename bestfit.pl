@@ -29,7 +29,7 @@ my @y_values;
 my $filename = pop;
 my @numbers = getNumbersFromFile($filename);
 
-print @numbers;
+##print @numbers;
 
  
 # Read in two columns of numbers
@@ -41,18 +41,18 @@ push @x_values, $current_x;
 my $current_y = $2;
 push @y_values, $current_y;
 
-print "x is $current_x, y is $current_y \n";
+##print "x is $current_x, y is $current_y \n";
 }
 
-print "X average is ";
+##print "X average is ";
 my $x_average = mean(\@x_values);
-print $x_average;
-print "\n";
+##print $x_average;
+##print "\n";
 
-print "Y average is ";
+##print "Y average is ";
 my $y_average =  mean(\@y_values);
-print $y_average;
-print "\n";
+##print $y_average;
+##print "\n";
 
 # calculate the sum of each x point minus x average multiplied by each y point minus y average
 my $counter = 0;
@@ -66,22 +66,26 @@ foreach(@x_values)
 
 }
 
-print "Sum Top is $sum_top\n";
-print "Sum Bottom is $sum_bottom\n";
+##print "Sum Top is $sum_top\n";
+##print "Sum Bottom is $sum_bottom\n";
 my $m = $sum_top/$sum_bottom;
 # this gives us "m" - the gradient.
-print "So the gradient is $m\n";
+##print "So the gradient is $m\n";
 
 my $offset = $y_average - ($m * $x_average);
 
-print "And the offset is $offset\n";
+##print "And the offset is $offset\n";
 
 foreach my $pair (@numbers)
 {
     $pair=~ /(\d+)\s+(\d+)/ || die "couldn't parse this line";
     my $x = $1;
     my $y = applyFormula($m, $x, $offset);
+    my $dateToFormat = dateFromDays("01011900",$x);
+    my $formattedDate;
+    $dateToFormat =~ /(\d\d)(\d\d)(\d\d\d\d)/;
+    $formattedDate = $1.'/'.$2."/".$3;
 
-    print dateFromDays("01011900",$x)." ".$y."\n";
+    print $formattedDate." ".$y."\n";
  
 }

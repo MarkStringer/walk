@@ -24,6 +24,7 @@ sub getNumbersFromFile
         my $newEntry = numberOfDaysIncremental("01011900","$day$month$year")." ".$miles;
         push(@numbers, $newEntry);
     }
+    close($fh);
     return @numbers;
 }
 
