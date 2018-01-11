@@ -8,4 +8,5 @@ set xtics "01/01/2017", 1209600, "31/12/2017"
 set xtics font "Serif,10"
 plot "out.csv" using 1:3 with lines title "Actual" , \
 "MonthlyTargets.txt" using 1:2 with lines title "Target" , \
-"LinearTarget.txt" using 1:2 with lines title "Linear"
+"LinearTarget.txt" using 1:2 with lines title "Linear" , \
+"fit.csv" using 1:2 with lines title "Best Fit"
