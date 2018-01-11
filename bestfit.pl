@@ -75,17 +75,32 @@ my $m = $sum_top/$sum_bottom;
 my $offset = $y_average - ($m * $x_average);
 
 ##print "And the offset is $offset\n";
-
-foreach my $pair (@numbers)
+my $pair = shift @numbers;
+$pair=~ /(\d+)\s+(\d+)/ || die "couldn't parse this line";
+my $x = $1;
+for (my $i = $x; $i<($x+365); $i+=30)
 {
-    $pair=~ /(\d+)\s+(\d+)/ || die "couldn't parse this line";
-    my $x = $1;
-    my $y = applyFormula($m, $x, $offset);
-    my $dateToFormat = dateFromDays("01011900",$x);
+    my $y = applyFormula($m, $i, $offset);
+    my $dateToFormat = dateFromDays("01011900",$i);
     my $formattedDate;
     $dateToFormat =~ /(\d\d)(\d\d)(\d\d\d\d)/;
     $formattedDate = $1.'/'.$2."/".$3;
 
     print $formattedDate." ".$y."\n";
- 
 }
+
+##foreach my $pair (@numbers)
+##{
+##    $pair=~ /(\d+)\s+(\d+)/ || die "couldn't parse this line";
+##    my $x = $1;
+##    my $y = applyFormula($m, $x, $offset);
+##    my $dateToFormat = dateFromDays("01011900",$x);
+##    my $formattedDate;
+##    $dateToFormat =~ /(\d\d)(\d\d)(\d\d\d\d)/;
+##    $formattedDate = $1.'/'.$2."/".$3;
+##
+##    print $formattedDate." ".$y."\n";
+## 
+##}
+##
+##
