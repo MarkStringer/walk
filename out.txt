@@ -1,12 +1,37 @@
-0
-106.6
-213.2
-319.8
-426.4
-533
-639.6
-746.2
-852.8
-959.4
-1066
-1172.6
+
+* FILE: 
+  Records:           19
+  Out of range:       0
+  Invalid:            0
+  Column headers:     0
+  Blank:              0
+  Data Blocks:        1
+
+* COLUMNS:
+  Mean:             112.4211           104.7632
+  Std Dev:            9.1956             2.4711
+  Sample StdDev:      9.4476             2.5389
+  Skewness:          -0.8777             1.0533
+  Kurtosis:           3.2791             3.0519
+  Avg Dev:            7.0305             1.9152
+  Sum:             2136.0000          1990.5000
+  Sum Sq.:       241738.0000        208647.0900
+
+  Mean Err.:          2.1096             0.5669
+  Std Dev Err.:       1.4917             0.4009
+  Skewness Err.:      0.5620             0.5620
+  Kurtosis Err.:      1.1239             1.1239
+
+  Minimum:           90.0000 [ 0]      101.9000 [15]
+  Maximum:          125.0000 [18]      110.0000 [ 0]
+  Quartile:         108.0000           102.8000
+  Median:           113.0000           104.1000
+  Quartile:         119.0000           105.6000
+
+  Linear Model:       y = -0.2599 x + 134
+  Slope:              -0.2599 +- 0.0166
+  Intercept:          134 +- 1.873
+  Correlation:        r = -0.967
+  Sum xy:             2.234e+05
+
+-0.259863722728181 133.9773111446
