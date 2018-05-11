@@ -1,3 +1,6 @@
+#! /bin/bash
 perl sort.pl > out.csv
 perl bestfit.pl out.csv > fit.csv
-gnuplot test.gnu
+`bash weightFit.sh`
+gnuplot twoaxes.gnu
+firefox file.svg&

@@ -2,7 +2,7 @@ use v5.10;
 use strict;
 
 my $filestring = "";
-$filestring .= "write";
+$filestring .= "walk";
 my $datestring = `date +%d%m%Y`;
 $datestring =~ s/\s+//g;
 $filestring = $filestring.$datestring.'.txt';

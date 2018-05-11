@@ -53,13 +53,17 @@ return $counter;
 sub dateFromDays
 {
         my$counter = pop;
+	#print "Counter is $counter\n";
+	$counter = int($counter);
 	my$firstDate = pop;
+	#print "First date is $firstDate\n";
     	$firstDate =~ /(\d\d)(\d\d)(\d\d\d\d)/ || return 0;
    	my $firstDay = $1;
     	my $firstMonth = $2;
     	my $firstYear = $3;
-        while($counter)
+        while($counter > 0)
 	{
+		#print "$counter\n";
         	$counter--;
         	$firstDay++;
         	if ($firstDay > ($days[$firstMonth-1] + (($firstMonth==2) && isLeapYear($firstYear))))
