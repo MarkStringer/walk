@@ -22,7 +22,7 @@ foreach my $thing (@things) {
     my $year = $3; 
     open(my $fh, '<', $thing) || die "Could not open $thing";
     while (my $row = <$fh>) {
-       if($row =~/(\d+\.?\d*)\s+Mile.*/)
+       if($row =~/(\d+\.?\d*)\s+Mile.*/i)
        {
            my $walk = $1;
            print "$day\/$month\/$year$delim";
