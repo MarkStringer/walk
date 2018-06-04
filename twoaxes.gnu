@@ -21,6 +21,6 @@ plot "out.csv"                 using 1:3 axes x1y2 with lines ls 1 title "Actual
 "MonthlyTargets.txt"           using 1:2 axes x1y2 with lines ls 2 title "Target" ,  \
 "LinearTarget.txt"             using 1:2 axes x1y2 with lines ls 3 title "Linear" ,  \
 "fit.csv"                      using 1:2 axes x1y2 with lines ls 4 title "Best Fit", \
-"weight.csv"                   using 1:2 axes x1y1 with lines ls 6 title "Weight", \
-"weightFit.csv"		       using 1:2 axes x1y1 with lines ls 7 title "Weight Best Fit"
+"weight.csv"                   using 1:2 axes x1y1 with lines ls 7 title "Weight", \
+"weightFit.csv"		       using 1:2 axes x1y1 with lines ls 6 title "Weight Best Fit"
 
