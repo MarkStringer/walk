@@ -1,13 +1,13 @@
 set terminal svg enhanced size 800,600
 set output 'file.svg'
 set y2range [-200:1400]
-set yrange [80:120]
+set yrange [85:120]
 set xdata time
 set timefmt "%d/%m/%Y"
 set format x "%d/%m/%Y" 
 set xtics rotate
 set xrange ["01/01/2018":"31/12/2018"]
-set xtics "01/01/2018", 1209600, "31/12/2018"
+set xtics nomirror "01/01/2018", 1209600, "31/12/2018"
 set y2tics "-200", 100, "1400"
 set ytics nomirror
 set style line 1 lt 1 lw 2 pt 3 ps 0.5
