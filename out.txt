@@ -3,7 +3,6 @@
   Records:           49
   Out of range:       0
   Invalid:            0
-  Column headers:     0
   Blank:              0
   Data Blocks:        1
 
@@ -13,7 +12,7 @@
   Sample StdDev:     19.5300             3.4830
   Skewness:          -0.1259             0.8215
   Kurtosis:           2.0906             3.1458
-  Avg Dev:           16.5823             2.8070
+  Avg Dev:           16.0816             2.4082
   Sum:             6493.0000          4957.0000
   Sum Sq.:       878697.0000        502048.6000
 
