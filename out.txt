@@ -1,6 +1,6 @@
 
 * FILE: 
-  Records:           55
+  Records:           56
   Out of range:       0
   Invalid:            0
   Column headers:     0
@@ -8,30 +8,30 @@
   Data Blocks:        1
 
 * COLUMNS:
-  Mean:             136.4364           100.5800
-  Std Dev:           21.4262             3.6627
-  Sample StdDev:     21.6237             3.6965
-  Skewness:          -0.1177             0.7368
-  Kurtosis:           1.9976             3.0561
-  Avg Dev:           18.5739             2.9731
-  Sum:             7504.0000          5531.9000
-  Sum Sq.:       1.04907e+06        557136.3500
+  Mean:             137.0714           100.4732
+  Std Dev:           21.7501             3.7152
+  Sample StdDev:     21.9469             3.7489
+  Skewness:          -0.1201             0.7052
+  Kurtosis:           1.9842             3.0312
+  Avg Dev:           18.8571             3.0087
+  Sum:             7676.0000          5626.5000
+  Sum Sq.:       1.07865e+06        566085.5100
 
-  Mean Err.:          2.8891             0.4939
-  Std Dev Err.:       2.0429             0.3492
-  Skewness Err.:      0.3303             0.3303
-  Kurtosis Err.:      0.6606             0.6606
+  Mean Err.:          2.9065             0.4965
+  Std Dev Err.:       2.0552             0.3511
+  Skewness Err.:      0.3273             0.3273
+  Kurtosis Err.:      0.6547             0.6547
 
-  Minimum:           90.0000 [ 0]       95.0000 [54]
-  Maximum:          171.0000 [54]      110.0000 [ 0]
-  Quartile:         118.0000            97.7000
-  Median:           137.0000            99.8000
-  Quartile:         155.0000           103.1000
+  Minimum:           90.0000 [ 0]       94.6000 [55]
+  Maximum:          172.0000 [55]      110.0000 [ 0]
+  Quartile:         118.5000            97.4000
+  Median:           138.0000            99.8000
+  Quartile:         155.5000           102.9500
 
-  Linear Model:       y = -0.165 x + 123.1
-  Slope:              -0.165 +- 0.006128
-  Intercept:          123.1 +- 0.8463
-  Correlation:        r = -0.9653
-  Sum xy:             7.506e+05
+  Linear Model:       y = -0.1652 x + 123.1
+  Slope:              -0.1652 +- 0.005927
+  Intercept:          123.1 +- 0.8226
+  Correlation:        r = -0.9669
+  Sum xy:             7.669e+05
 
--0.165021703376624 123.094961129785
+-0.165168354525941 123.113076595377
