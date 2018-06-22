@@ -14,7 +14,7 @@ set style line 1 lt 1 lw 2 pt 3 ps 0.5
 set style line 2 lt 2 lw 2 pt 3 ps 0.5
 set style line 3 lt 3 lw 2 pt 3 ps 0.5
 set style line 4 lt 4 lw 2 pt 3 ps 0.5
-set style line 5 lt 5 lw 2 pt 3 ps 0.5
+set style line 5 lt 8 lw 2 pt 3 ps 0.5
 set style line 6 lt 6 lw 2 pt 3 ps 0.5
 set style line 7 lt 7 lw 2 pt 3 ps 0.5
 
@@ -23,5 +23,6 @@ plot "out.csv"                 using 1:3 axes x1y2 with lines ls 1 title "Actual
 "LinearTarget.txt"             using 1:2 axes x1y2 with lines ls 3 title "Linear" ,  \
 "fit.csv"                      using 1:2 axes x1y2 with lines ls 4 title "Best Fit", \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 7 title "Weight", \
-"weightFit.csv"		       using 1:2 axes x1y1 with lines ls 6 title "Weight Best Fit"
+"weightFit.csv"		       using 1:2 axes x1y1 with lines ls 6 title "Weight Best Fit", \
+"weekWeightFit.csv"	       using 1:2 axes x1y1 with lines ls 5 title "Week Weight Best Fit"
 
