@@ -3,35 +3,34 @@
   Records:           7
   Out of range:      0
   Invalid:           0
-  Column headers:    0
   Blank:             0
   Data Blocks:       1
 
 * COLUMNS:
-  Mean:             172.0000           94.8714
-  Std Dev:            2.0000            0.6474
-  Sample StdDev:      2.1602            0.6993
-  Skewness:           0.0000           -0.0897
-  Kurtosis:           1.7500            2.8686
-  Avg Dev:            1.7143            0.4898
-  Sum:             1204.0000          664.1000
-  Sum Sq.:       207116.0000        63007.0500
+  Mean:             180.4286           93.3857
+  Std Dev:            2.4411            0.5986
+  Sample StdDev:      2.6367            0.6466
+  Skewness:           0.0866            0.2228
+  Kurtosis:           1.5676            1.1377
+  Avg Dev:            1.7143            0.0000
+  Sum:             1263.0000          653.7000
+  Sum Sq.:       227923.0000        61048.7500
 
-  Mean Err.:          0.7559            0.2447
-  Std Dev Err.:       0.5345            0.1730
+  Mean Err.:          0.9227            0.2263
+  Std Dev Err.:       0.6524            0.1600
   Skewness Err.:      0.9258            0.9258
   Kurtosis Err.:      1.8516            1.8516
 
-  Minimum:          169.0000 [0]       93.7000 [4]
-  Maximum:          175.0000 [6]       96.0000 [0]
-  Quartile:         170.0000           94.6000
-  Median:           172.0000           95.0000
-  Quartile:         174.0000           95.2000
+  Minimum:          177.0000 [0]       92.8000 [4]
+  Maximum:          184.0000 [6]       94.1000 [2]
+  Quartile:         178.0000           92.8000
+  Median:           180.0000           93.1000
+  Quartile:         183.0000           94.1000
 
-  Linear Model:       y = -0.2107 x + 131.1
-  Slope:              -0.2107 +- 0.1099
-  Intercept:          131.1 +- 18.9
-  Correlation:        r = -0.6509
-  Sum xy:             1.142e+05
+  Linear Model:       y = -0.2219 x + 133.4
+  Slope:              -0.2219 +- 0.04667
+  Intercept:          133.4 +- 8.421
+  Correlation:        r = -0.9049
+  Sum xy:             1.179e+05
 
--0.210714285714078 131.11428571425
+-0.221917808219066 133.42602739724
