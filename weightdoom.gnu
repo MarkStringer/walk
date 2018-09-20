@@ -1,6 +1,6 @@
 set terminal svg enhanced size 800,600
 set output 'file.svg'
-set yrange [85:120]
+set yrange [0:200]
 set xdata time
 set timefmt "%d/%m/%Y"
 set format x "%d/%m/%Y" 
@@ -21,22 +21,23 @@ a = 1
 b = 1e-8
 fit [strptime("%d/%m/%Y","09/04/2018"):strptime("%d/%m/%Y","01/03/2039")] f(x) "weight.csv" u 1:2 via a,b
 
-g(x) = log(n) - x/u + c; 
-n = 9.995
-u = 1
-c = 10
-fit log(g(x)) "weight.csv" using 1:(log($2)) via n,u,c
-
-h(x) = c + n*exp(-x/u)
-
 fmt = '%d/%m/%Y'
 doomsday = strftime(fmt, (85 - a) /b)
 
-set table "output.txt"
+g(x) = j + (k * x)
+fit [strptime("%d/%m/%Y","09/04/2018"):strptime("%d/%m/%Y","01/03/2039")] g(x) "weight.csv" u 1:(log($2)) via j, k
+j = -1
+k = 0.001
+
+h(x) = exp(j)*exp(k*x)
+
+#set table "output.txt"
+
 set label 1 "Target Weight:".doomsday at "30/06/2018", 100
 plot "weight.csv" using 1:2 with lines ls 7 title 'Weight',\
-     f(x) with lines ls 4 dt 3 title 'Expected Weight', \
-     g(x) with lines ls 5 dt 3 title 'Expected Exponential', \
-     h(x) with lines ls 6 dt 3 title 'Expected Exponential2'
+     f(x) with lines ls 4 dt 3 title 'Expected Weight',\
+     "weight.csv" using 1:(log($2))  with lines ls 2, \
+     g(x) with lines ls 8 dt 3 title 'Exp best fit', \
+     h(x) with lines ls 7 dt 3 title 'Exp exp best fit'
+     
 
-unset table
