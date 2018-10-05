@@ -1,4 +1,5 @@
 #! /bin/bash
+git pull
 git add walk*.txt
 git add *.sh
 git add weight.csv
