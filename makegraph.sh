@@ -5,3 +5,7 @@ perl bestfit.pl out.csv > fit.csv
 `bash weekWeightFit.sh`
 gnuplot twoaxes.gnu
 firefox file.svg&
+
+## badges and rankings
+./wagon_badge  7
+./wagon_badge 14
