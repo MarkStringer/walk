@@ -8,16 +8,10 @@ use 5.010;
 ## run aggregate
 my %totals;
 my @lines = `./aggregate.pl | sort`;
-my $count = 0;
-my $today = `date +%Y%m%d`;
-
-## aggregate weeks together 
-my $weekStart="20180101";
-my $weekEnd=  "20180107";
-
-my $day = $weekStart;
-my $week = 0;
-my $total = 0;
+my $day="20180101";
+my $week=0;
+my $total=0;
+my $count=0;
 
 foreach my $line(@lines)
 {
@@ -25,26 +19,21 @@ foreach my $line(@lines)
         $totals{$1}=$2;
 }
 
-while ($day <= $today)
+while($week < 52)
 {
-	$total = 0;
-	while ($day < $weekEnd)
+	$day=`date -d \"$day + 1 day\" +%Y%m%d`;
+	$day =~ s/\D+//g;
+	$week = `date -d \"$day\" +%V`;
+	$week=~ s/\D+//g;
+	if($totals{$day})
 	{
-		my $newDay = $day."+ 1 day";
-		$day = `date -d \"$newDay\" +%Y%m%d`;
-		say $day;
-		if( $totals{$day})
-		{
-			$total += $totals{$day};
-		}
+		$total+=$totals{$day};
 	}
-	my $newWeek = $weekEnd."+ 1 week";
-        $weekEnd = `date -d \"$newWeek\" +%Y%m%d`;
-
-	$week++;
-	say $week." ".$total;
-	if ($week > 2)
+	$count++;
+	if ($count == 7)
 	{
-		exit 0;
+		$count = 0;
+		say $week." ".$total;
+		$total = 0;
 	}
 }
