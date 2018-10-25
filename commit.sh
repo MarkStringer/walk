@@ -1,8 +1,8 @@
 #! /bin/bash
 git pull
-add *rank*
-add *.pl
-add *badge*
+git add *rank*
+git add *.pl
+git add *badge*
 git add walk*.txt
 git add *.sh
 git add weight.csv

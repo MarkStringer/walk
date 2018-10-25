@@ -1,0 +1,50 @@
+#! /usr/local/bin/perl
+use Cwd;
+use lib cwd;
+use strict;
+use warnings;
+use 5.010;
+
+## run aggregate
+my %totals;
+my @lines = `./aggregate.pl | sort`;
+my $count = 0;
+my $today = `date +%Y%m%d`;
+
+## aggregate weeks together 
+my $weekStart="20180101";
+my $weekEnd=  "20180107";
+
+my $day = $weekStart;
+my $week = 0;
+my $total = 0;
+
+foreach my $line(@lines)
+{
+	$line =~ /^(\d+)\s+(\d+\.?\d*)$/;
+        $totals{$1}=$2;
+}
+
+while ($day <= $today)
+{
+	$total = 0;
+	while ($day < $weekEnd)
+	{
+		my $newDay = $day."+ 1 day";
+		$day = `date -d \"$newDay\" +%Y%m%d`;
+		say $day;
+		if( $totals{$day})
+		{
+			$total += $totals{$day};
+		}
+	}
+	my $newWeek = $weekEnd."+ 1 week";
+        $weekEnd = `date -d \"$newWeek\" +%Y%m%d`;
+
+	$week++;
+	say $week." ".$total;
+	if ($week > 2)
+	{
+		exit 0;
+	}
+}
