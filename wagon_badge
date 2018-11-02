@@ -27,9 +27,7 @@ foreach my $line (@lines)
 	}
 	$count++
 }
-if($count == $days)
+if($count >= $days)
 {
 	say "On the wagon for $days days badge";
 }
-
-
