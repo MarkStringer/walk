@@ -3,7 +3,7 @@ perl sort.pl > out.csv
 perl bestfit.pl out.csv > fit.csv
 `bash weightFit.sh`
 `bash weekWeightFit.sh`
-#gnuplot twoaxes.gnu
+gnuplot twoaxes.gnu
 
 ## badges and rankings
 ./wagon_badge  7
