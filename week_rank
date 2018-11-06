@@ -15,7 +15,6 @@ my $count=0;
 my $thisWeek = `date +%V`;
 my @weeks;
 $thisWeek=~ s/\D+//g;
-$thisWeek++;
 
 foreach my $line(@lines)
 {
