@@ -15,6 +15,7 @@ my $count=0;
 my $thisWeek = `date +%V`;
 my @weeks;
 $thisWeek=~ s/\D+//g;
+$thisWeek++;
 
 foreach my $line(@lines)
 {
@@ -22,7 +23,7 @@ foreach my $line(@lines)
         $totals{$1}=$2;
 }
 
-while($week < $thisWeek)
+while($week <= $thisWeek)
 {
 	$day=`date -d \"$day + 1 day\" +%Y%m%d`;
 	$day =~ s/\D+//g;
