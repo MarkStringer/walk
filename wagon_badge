@@ -4,12 +4,13 @@ use lib cwd;
 use strict;
 use warnings;
 use 5.010;
-
+use Date::Simple (':all');
 my $days = shift || exit 0;
 
 ## run aggregate
 my @lines = `./aggregate.pl | sort | tail -n $days`;
-my $cutoffDate = `date -d "$days days ago" +%Y%m%d`;
+my $cutoffDate = today()-$days;
+$cutoffDate =~ s/\D+//g;
 my $count = 0;
 foreach my $line (@lines)
 {

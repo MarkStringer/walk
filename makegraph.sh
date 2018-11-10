@@ -10,7 +10,7 @@ gnuplot twoaxes.gnu
 ./wagon_badge 14
 ./week_rank
 
-## show the graph
+# show the graph
 read -n1 -r -p "Show Graph? [Y]/N" key
 if [[ "$key" =~ ^([nN]+$) ]]
 then
