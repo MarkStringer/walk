@@ -5,7 +5,7 @@ use warnings;
 use 5.010;
 use Days;
 
-my $dir   = shift // '.';
+my $dir   = shift || '.';
 my $total = 0;
 my $delim = "\t";
 
@@ -19,7 +19,7 @@ foreach my $thing (@things) {
     my $day   = $1;
     my $month = $2;
     my $year  = $3;
-    open( my $fh, '<', $thing ) || die "Could not open $thing";
+    open( my $fh, '<', $dir."\/".$thing ) || die "Could not open $thing";
     while ( my $row = <$fh> ) {
         if ( $row =~ /(\d+\.?\d*)\s+Mile.*/i ) {
             my $walk = $1;

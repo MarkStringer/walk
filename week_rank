@@ -40,7 +40,7 @@ while($week <= $thisWeek)
 		$count = 0;
 		my $thisWeekTag="";
 		if ($week == $thisWeek){$thisWeekTag=" THISWEEK"};
-		##say $total." ".$week." ".$day.$thisWeekTag;
+		say $total." ".$week." ".$day.$thisWeekTag;
                 push @weeks, $total." ".$week." ".$day.$thisWeekTag;	
 		$total = 0;
 	}

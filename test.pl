@@ -18,7 +18,6 @@ ok(dateFromDays("01011900", 365)eq "01011901", "More dates from Days");
 
 ok(dateFromDays("28021993", numberOfDaysIncremental("28021993", "28022005"))=="28022005");
 
-
 my @numbers =getNumbersFromFile("testout.csv");
 
 print @numbers;
