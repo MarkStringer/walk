@@ -3,6 +3,7 @@ package Days;
 use strict;
 use warnings;
 use 5.010;
+use Date::Calc qw(Delta_Days);
 
 use Exporter;
 our @ISA    = qw(Exporter);
@@ -13,7 +14,7 @@ sub numberOfDays
 {
     my $thing = pop;
     $thing =~ /walk(\d\d)(\d\d)(\d\d\d\d).*/ || die "File not in right format $thing";
-    my $returnValue  = numberOfDaysIncremental("01012016", "$1$2$3");    
+    my $returnValue = Delta_Days( "2017", "01", "01", $3, $2, $1);
     return $returnValue;
 }
 sub numberOfDaysIncremental
