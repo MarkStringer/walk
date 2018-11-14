@@ -29,21 +29,20 @@ while($week <= $thisWeek)
 	$day =~ s/\D+//g;
 	$week = `date -d \"$day\" +%V`;
 	$week=~ s/\D+//g;
-	##print $count." ";
-	if($totals{$day})
-	{
-		$total+=$totals{$day};
-	}
-	$count++;
+        $count++;
 	if ($count == 7)
 	{
 		$count = 0;
 		my $thisWeekTag="";
 		if ($week == $thisWeek){$thisWeekTag=" THISWEEK"};
-		say $total." ".$week." ".$day.$thisWeekTag;
                 push @weeks, $total." ".$week." ".$day.$thisWeekTag;	
 		$total = 0;
 	}
+        if($totals{$day})
+        {
+                $total+=$totals{$day};
+        }
+
 }
 ## sort by the total at the beginning of the line, in reverse order
 my @rankedWeeks = sort {
