@@ -26,6 +26,7 @@ foreach my $thing (@things) {
             print "$day\/$month\/$year$delim";
             print $walk;
             $total += $walk;
+            $total = sprintf("%.2f", $total);
             say "$delim$total";
         }
 

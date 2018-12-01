@@ -13,9 +13,9 @@ my $m= pop || die "Something went wrong";
 
 my $x = 0;
 my $y = 1;
-my $increment = 30;
+my $increment = 10;
 
-while ($x < 360)
+while ($x <= 375)
 {
 	$y = $m * $x + $c;
         my $newdate = dateFromDays("31122017", $x);
