@@ -15,7 +15,7 @@ my $x = 0;
 my $y = 1;
 my $increment = 10;
 
-while ($x <= 375)
+while ($x <= 395)
 {
 	$y = $m * $x + $c;
         my $newdate = dateFromDays("31122017", $x);

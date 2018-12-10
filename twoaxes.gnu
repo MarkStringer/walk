@@ -6,8 +6,8 @@ set xdata time
 set timefmt "%d/%m/%Y"
 set format x "%d/%m/%Y" 
 set xtics rotate
-set xrange ["01/01/2018":"31/12/2018"]
-set xtics nomirror "01/01/2018", 1209600, "31/12/2018"
+set xrange ["01/01/2018":"31/01/2019"]
+set xtics nomirror "01/01/2018", 1209600, "31/01/2019"
 set y2tics "-200", 100, "1400"
 set ytics nomirror
 set style line 1 lt 1 lw 2 pt 3 ps 0.5
