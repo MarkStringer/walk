@@ -23,7 +23,8 @@ foreach my $thing (@things) {
     while ( my $row = <$fh> ) {
         if ( $row =~ /(\d+\.?\d*)\s+Mile.*/i ) {
             my $walk = $1;
-            print "$day\/$month\/$year$delim";
+            # print "$day\/$month\/$year$delim";
+            print $year.$month.$day.$delim;
             print $walk;
             $total += $walk;
             $total = sprintf("%.2f", $total);
