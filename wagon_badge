@@ -6,11 +6,13 @@ use warnings;
 use 5.010;
 use Date::Simple (':all');
 my $days = shift || exit 0;
-
+my $message = "On the wagon for $days days badge";
+$days--;
 ## run aggregate
 my @lines = `./aggregate.pl | sort | tail -n $days`;
-my $cutoffDate = today()-$days;
+my $cutoffDate = `date +%Y%m%d -d "$days days ago"`;
 $cutoffDate =~ s/\D+//g;
+
 my $count = 0;
 foreach my $line (@lines)
 {
@@ -30,5 +32,5 @@ foreach my $line (@lines)
 }
 if($count >= $days)
 {
-	say "On the wagon for $days days badge";
+	say $message;
 }

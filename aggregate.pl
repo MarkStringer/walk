@@ -3,17 +3,17 @@ use strict;
 use warnings;
 use 5.010;
 
-my $file = "out.csv";
+my $file = "walk.csv";
 
 my %dates;
 
 open(my $fh, '<:encoding(UTF-8)', $file) || die "failed to open file $file";
 while (<$fh>)
 {
-	/(\d\d\/\d\d\/\d\d\d\d)\s+(\d*\.?\d*)\s+(.+)/;
+	/^(\d\d\d\d\d\d\d\d)\s+(\d*\.?\d*)\s+(.+)/;
 	my $date = $1;
 	my $walk = $2;
-	##print $date." ".$walk."\n";
+	#print $date." ".$walk."\n";
 
 	if( ! $dates{$date})
 	{
@@ -27,8 +27,7 @@ while (<$fh>)
 
 foreach my $date (keys %dates)
 {
-	$date =~ /(\d\d)\/(\d\d)\/(\d\d\d\d)/;
 
-        print "$3$2$1";
+  print $date;
   print " $dates{$date}\n";
 }

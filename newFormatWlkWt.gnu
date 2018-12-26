@@ -1,6 +1,6 @@
 set terminal svg enhanced size 800,600
 set output 'file.svg'
-set title "Weight Fit" font "Serif,32"
+set title "Actual Progress" font "Serif,32"
 
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
@@ -34,10 +34,15 @@ p = 1
 q = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] g(x) recent u 1:2 via p,q	
 
+h(x)= r+s*x
+r = 1
+s = 1e-8
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] h(x) "walk.csv" u 1:3 via r,s
 
 plot f(x) with lines ls 1 title 'Expected Weight' , \
 g(x) with lines ls 2 title 'Recent Trend' , \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 7 title "Weight" ,\
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 6 title "Walk" , \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 5 title "Linear" , \
-"MonthlyTargets.csv"           using 1:2 axes x1y2 with lines ls 4 title "Monthly"
+"MonthlyTargets.csv"           using 1:2 axes x1y2 with lines ls 4 title "Monthly" , \
+h(x) 			       axes x1y2 with lines ls 3 title "Walk Fit"
