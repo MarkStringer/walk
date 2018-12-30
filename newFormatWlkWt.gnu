@@ -5,13 +5,13 @@ set title "Actual Progress" font "Serif,32"
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20180101":"20190101"]
+set xrange ["20180101":"20190601"]
 set yrange [85:120]
 set y2range [-200:1400]
 set y2tics "-200", 100, "1400"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20180101",2592000, "20190101" 
+set xtics nomirror "20180101",2592000, "20190601" 
 set mxtics 4
 set ytics nomirror 
 
@@ -38,6 +38,9 @@ h(x)= r+s*x
 r = 1
 s = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] h(x) "walk.csv" u 1:3 via r,s
+
+##plot "weight.csv"                   using 1:2 axes x1y1 with lines ls 7 title "Weight" ,\
+##"walk.csv"                     using 1:3 axes x1y2 with lines ls 6 title "Walk"
 
 plot f(x) with lines ls 1 title 'Expected Weight' , \
 g(x) with lines ls 2 title 'Recent Trend' , \
