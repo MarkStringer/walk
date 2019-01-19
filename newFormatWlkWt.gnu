@@ -15,13 +15,17 @@ set xtics nomirror "20190101",2592000, "20191231"
 set mxtics 4
 set ytics nomirror 
 
+set colorsequence classic
+
 set style line 1 lt 1 lw 2 pt 3 ps 0.5
 set style line 2 lt 2 lw 2 pt 3 ps 0.5
 set style line 3 lt 3 lw 2 pt 3 ps 0.5
 set style line 4 lt 4 lw 2 pt 3 ps 0.5
-set style line 5 lt 8 lw 2 pt 3 ps 0.5
+set style line 5 lt 5 lw 2 pt 3 ps 0.5
 set style line 6 lt 6 lw 2 pt 3 ps 0.5
 set style line 7 lt 7 lw 2 pt 3 ps 0.5
+set style line 8 lt 8 lw 2 pt 3 ps 0.5
+
 
 
 f(x)=a+b*x
@@ -39,11 +43,11 @@ r = 1
 s = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] h(x) "walk.csv" u 1:3 via r,s
 
-plot f(x) with lines ls 1 title 'Expected Weight' , \
-g(x) with lines ls 2 title 'Recent Trend' , \
-"weight.csv"                   using 1:2 axes x1y1 with lines ls 7 title "Weight" ,\
-"weight2018.csv"	       using 1:2 axes x1y1 with lines ls 6 title "Weight 2018", \
+plot f(x) with lines ls 1 dt 2 title 'Expected Weight' , \
+g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
+"weight.csv"                   using 1:2 axes x1y1 with lines ls 3 title "Weight" ,\
+"weight2018.csv"	       using 1:2 axes x1y1 with lines ls 4 title "Weight 2018", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 5 title "Walk" , \
-"walk2018.csv"		       using 1:3 axes x1y2 with lines ls 3 title "Walk 2018", \
-"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 4 title "Target 2018", \
-h(x) axes x1y2 with lines ls 3 title "Walk Fit"
+"walk2018.csv"		       using 1:3 axes x1y2 with lines ls 6 title "Walk 2018", \
+"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2018", \
+h(x) axes x1y2 with lines ls 8 dt 2 title "Walk Fit"
