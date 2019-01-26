@@ -41,7 +41,7 @@ fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] g(x) recent u 
 h(x)= r+s*x
 r = 1
 s = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] h(x) "walk.csv" u 1:3 via r,s
+fit [strptime("%Y%m%d","20190101"):strptime("%Y%m%d","20200101")] h(x) "walk.csv" u 1:3 via r,s
 
 plot f(x) with lines ls 1 dt 2 title 'Expected Weight' , \
 g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
@@ -51,3 +51,7 @@ g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
 "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 6 title "Walk 2018", \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2018", \
 h(x) axes x1y2 with lines ls 8 dt 2 title "Walk Fit"
+
+t = sprintf ("%8.10f", s);
+
+print t;
