@@ -17,3 +17,4 @@ then
 else
 	firefox file.svg&	
 fi
+./commit.sh

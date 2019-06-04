@@ -1,6 +1,7 @@
 #! /bin/bash
 git pull
 git add *rank*
+git add *.js*
 git add *.pl
 git add *badge*
 git add walk*.txt
