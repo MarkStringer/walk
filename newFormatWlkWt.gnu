@@ -26,8 +26,6 @@ set style line 6 lt 6 lw 2 pt 3 ps 0.5
 set style line 7 lt 7 lw 2 pt 3 ps 0.5
 set style line 8 lt 8 lw 2 pt 3 ps 0.5
 
-
-
 f(x)=a+b*x
 a = 1
 b = 1e-8
@@ -47,7 +45,7 @@ plot f(x) with lines ls 1 dt 2 title 'Expected Weight' , \
 g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 3 title "Weight" ,\
 "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 4 title "Weight 2018", \
-"WeightTargets.csv"	       using 1:2 axes x1y1 with lines ls 8 title "Weight Target", \
+"WeightTargets.csv"	       using 1:2 axes x1y1 with lines ls 8 dt 3 title "Weight Target", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 5 title "Walk" , \
 "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 6 title "Walk 2018", \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2018", \
