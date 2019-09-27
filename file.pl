@@ -4,7 +4,7 @@ use strict;
 my $filestring = "";
 $filestring .= "walk";
 my $extraDate = join(" ", @ARGV) //'';
-say $extraDate;
+##say $extraDate;
 my $commandString;
 if ($extraDate)
 {
@@ -14,7 +14,7 @@ if ($extraDate)
    {
 	   $commandString = "date +%d%m%Y";
    }
-say $commandString;
+## say $commandString;
 
 
 my $datestring = `$commandString` || die "Something wrong with the date string";
