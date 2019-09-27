@@ -1,2 +1,2 @@
 #! /bin/bash
-vim `perl file.pl`
+vim `perl file.pl ${@}`
