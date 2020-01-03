@@ -42,8 +42,8 @@ s = 1e-8
 fit [strptime("%Y%m%d","20200101"):strptime("%Y%m%d","20201231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
-f(x) with lines ls 1 dt 2 title 'Expected Weight' , \
-g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
+## f(x) with lines ls 1 dt 2 title 'Expected Weight' , \
+## g(x) with lines ls 2 dt 2 title 'Recent Trend' , \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 3 title "Weight" ,\
 "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 4 title "Weight 2018", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 5 title "Walk" , \
