@@ -44,9 +44,9 @@ fit [strptime("%Y%m%d","20200101"):strptime("%Y%m%d","20201231")] h(x) "walk.csv
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 3 title "Weight" ,\
 "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 4 title "Weight 2018", \
-"walk.csv"                     using 1:3 axes x1y2 with lines ls 5 title "Walk" , \
+"walk.csv"                     using 1:3 axes x1y2 with lines ls 1 title "Walk" , \
 "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 6 title "Walk 2018", \
-"walk2019.csv"		       using 1:3 axes x1y2 with lines ls 1 title "Walk 2019", \
+"walk2019.csv"		       using 1:3 axes x1y2 with lines ls 2 title "Walk 2019", \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2018", \
 h(x) axes x1y2 with lines ls 8 dt 2 title "Walk Fit"
 
