@@ -5,13 +5,13 @@ set title "Actual Progress" font "Serif,32"
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20190101":"20191231"]
+set xrange ["20190101":"20201031"]
 set yrange [85:120]
 set y2range [-200:1400]
 set y2tics "-200", 100, "1400"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20190101",2592000, "20191231" 
+set xtics nomirror "20190101",2592000, "20200131" 
 set mxtics 4
 set ytics nomirror 
 
