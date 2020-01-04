@@ -29,12 +29,12 @@ set style line 8 lt 8 lw 2 pt 3 ps 0.5
 f(x)=a+b*x
 a = 1
 b = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] f(x) datafile u 1:2 via a,b
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20201231")] f(x) datafile u 1:2 via a,b
 
 g(x)= p+q*x
 p = 1
 q = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20200101")] g(x) recent u 1:2 via p,q	
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20201231")] g(x) recent u 1:2 via p,q	
 
 h(x)= r+s*x
 r = 1
@@ -43,6 +43,8 @@ fit [strptime("%Y%m%d","20200101"):strptime("%Y%m%d","20201231")] h(x) "walk.csv
 
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 3 title "Weight" ,\
+f(x) with lines ls 1 title 'Expected Weight' , \
+g(x) with lines ls 2 title 'Recent Weight Trend' , \
 "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 4 title "Weight 2018", \
 "weight2019.csv"	       using 1:2 axes x1y1 with lines ls 8 title "Weight 2019", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 1 title "Walk" , \
