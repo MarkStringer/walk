@@ -50,7 +50,7 @@ g(x) with lines ls 2 title 'Recent Weight Trend' , \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 1 title "Walk" , \
 "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 6 title "Walk 2018", \
 "walk2019.csv"		       using 1:3 axes x1y2 with lines ls 2 title "Walk 2019", \
-"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2018", \
+"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 7 dt 3 title "Target 2020", \
 h(x) axes x1y2 with lines ls 8 dt 2 title "Walk Fit"
 
 t = sprintf ("%8.10f", s);
