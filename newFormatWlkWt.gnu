@@ -35,14 +35,6 @@ set palette defined ( 0 '#1B9E77',\
 		      5 '#E6AB02',\
 		      6 '#A6761D',\
 		      7 '#666666' )
-set style line 1 lt 1 lw 2 pt 3 ps 0.5
-set style line 2 lt 2 lw 2 pt 3 ps 0.5
-set style line 3 lt 3 lw 2 pt 3 ps 0.5
-set style line 4 lt 4 lw 2 pt 3 ps 0.5
-set style line 5 lt 5 lw 2 pt 3 ps 0.5
-set style line 6 lt 6 lw 2 pt 3 ps 0.5
-set style line 7 lt 7 lw 2 pt 3 ps 0.5
-set style line 8 lt 8 lw 2 pt 3 ps 0.5
 
 f(x)=a+b*x
 a = 1
