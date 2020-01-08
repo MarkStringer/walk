@@ -16,25 +16,25 @@ set mxtics 4
 set ytics nomirror 
 
 # line styles
-set style line 1 lt 1 lc rgb '#1B9E77' # dark teal
-set style line 2 lt 1 lc rgb '#D95F02' # dark orange
-set style line 3 lt 1 lc rgb '#7570B3' # dark lilac
-set style line 4 lt 1 lc rgb '#E7298A' # dark magenta
-set style line 5 lt 1 lc rgb '#66A61E' # dark lime green
-set style line 6 lt 1 lc rgb '#E6AB02' # dark banana
-set style line 7 lt 1 lc rgb '#A6761D' # dark tan
-set style line 8 lt 1 lc rgb '#666666' # dark gray
+set style line 1 lt 1 lc rgb '#e6194B' # red
+set style line 2 lt 1 lc rgb '#f58231' # orange
+set style line 3 lt 1 lc rgb '#808000' # olive
+set style line 4 lt 1 lc rgb '#bfef45' # lime
+set style line 5 lt 1 lc rgb '#3cb44b' # green
+set style line 6 lt 1 lc rgb '#42d4f4' # cyan
+set style line 7 lt 1 lc rgb '#000075' # navy
+set style line 8 lt 1 lc rgb '#f032e6' # magenta
 
 # palette
 set palette maxcolors 8
-set palette defined ( 0 '#1B9E77',\
+set palette defined ( 0 '#e6194B',\
     	    	      1 '#D95F02',\
-		      2 '#7570B3',\
-		      3 '#E7298A',\
-		      4 '#66A61E',\
-		      5 '#E6AB02',\
-		      6 '#A6761D',\
-		      7 '#666666' )
+		      2 '#808000',\
+		      3 '#bfef45',\
+		      4 '#3cb44b',\
+		      5 '#42d4f4',\
+		      6 '#000075',\
+		      7 '#f032e6' )
 
 f(x)=a+b*x
 a = 1
