@@ -15,6 +15,6 @@ if [[ "$key" =~ ^([nN]+$) ]]
 then
 	exit 0
 else
-	firefox file.svg&	
+	ffx file.svg&	
 fi
 ./commit.sh
