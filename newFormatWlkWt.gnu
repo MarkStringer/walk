@@ -2,6 +2,7 @@ set terminal svg enhanced size 800,600
 set output 'file.svg'
 set title "Actual Progress" font "Serif,32"
 
+set key left
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
