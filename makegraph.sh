@@ -1,7 +1,7 @@
 #! /bin/bash
 perl sort.pl > walk.csv
 tail -n 7 weight.csv > recent.csv
-perl sort.pl | grep Themis > Themis.csv
+perl sort.pl | grep Themis > themis.csv
 gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 
 # show the graph
