@@ -266,7 +266,7 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(240,  50, 230)'  d='M228.2,102.1 L270.4,102.1 M53.9,217.6 L55.7,215.1  '/></g>
+	<path stroke='rgb(  0, 255,   0)'  d='M228.2,102.1 L270.4,102.1 M53.9,217.6 L55.7,215.1  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Expected Weight</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -433,7 +433,7 @@
 		L658.6,245.6 L660.4,244.3 L662.3,230.3 L664.1,235.4 L665.9,240.5 L667.7,236.7 L669.5,231.6 L671.4,231.6
 		L673.2,231.6 L675.0,229.1 L676.8,229.1 L678.7,221.4 L680.5,221.4 L682.3,224.0 L684.1,224.0 L685.9,221.4
 		L689.6,212.5 L691.4,230.3 L693.2,224.0 L700.5,229.1 L702.3,212.5 L706.0,216.4 L707.8,217.6 L709.6,230.3
-		L713.3,229.1 L715.1,224.0 L716.9,218.9 L53.9,217.6 L55.7,215.1  '/></g>
+		L713.3,229.1 L715.1,224.0 L716.9,218.9  '/></g>
 	</g>
 	<g id="gnuplot_plot_7" ><title>Walk</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -613,23 +613,32 @@
 		L693.2,156.1 L695.0,155.0 L696.9,152.0 L700.5,151.7 L700.5,151.0 L702.3,148.0 L704.2,145.5 L706.0,143.0
 		L707.8,140.5 L709.6,137.7 L711.4,135.2 L713.3,133.5 L715.1,131.3 L716.9,128.1  '/></g>
 	</g>
-	<g id="gnuplot_plot_11" ><title>Target 2021</title>
+	<g id="gnuplot_plot_11" ><title>Themis walk 2021</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(219.9,286.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Arial" >Themis walk 2021</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0,   0, 255)'  d='M228.2,282.1 L270.4,282.1 M53.9,478.5  '/></g>
+	</g>
+	<g id="gnuplot_plot_12" ><title>Target 2021</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(219.9,304.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Target 2021</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 66, 212, 244)' stroke-dasharray='1.0,2.0'  d='M228.2,282.1 L270.4,282.1  '/></g>
+	<path stroke='rgb( 66, 212, 244)' stroke-dasharray='1.0,2.0'  d='M228.2,300.1 L270.4,300.1 M53.9,479.7 L716.9,108.8  '/></g>
 	</g>
-	<g id="gnuplot_plot_12" ><title>Walk Fit</title>
+	<g id="gnuplot_plot_13" ><title>Walk Fit</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(219.9,304.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+	<g transform="translate(219.9,322.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Walk Fit</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0, 117)' stroke-dasharray='1.0,2.0'  d='M228.2,300.1 L270.4,300.1 M53.9,478.5 L60.6,478.3 L67.3,478.1 L74.0,477.8 L80.7,477.6 L87.4,477.4
+	<path stroke='rgb(  0, 255,   0)' stroke-dasharray='1.0,2.0'  d='M228.2,318.1 L270.4,318.1 M53.9,478.5 L60.6,478.3 L67.3,478.1 L74.0,477.8 L80.7,477.6 L87.4,477.4
 		L94.1,477.1 L100.8,476.9 L107.5,476.7 L114.2,476.5 L120.9,476.2 L127.6,476.0 L134.3,475.8 L141.0,475.6
 		L147.7,475.3 L154.4,475.1 L161.1,474.9 L167.7,474.6 L174.4,474.4 L181.1,474.2 L187.8,474.0 L194.5,473.7
 		L201.2,473.5 L207.9,473.3 L214.6,473.1 L221.3,472.8 L228.0,472.6 L234.7,472.4 L241.4,472.1 L248.1,471.9
@@ -643,7 +652,7 @@
 		L629.8,459.0 L636.5,458.7 L643.2,458.5 L649.9,458.3 L656.6,458.1 L663.3,457.8 L670.0,457.6 L676.7,457.4
 		L683.4,457.1 L690.1,456.9 L696.8,456.7 L703.5,456.5 L710.2,456.2 L716.9,456.0  '/></g>
 	</g>
-<g fill="none" color="white" stroke="rgb(  0,   0, 117)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="rgb(  0, 255,   0)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
