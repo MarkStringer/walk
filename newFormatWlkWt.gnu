@@ -40,17 +40,17 @@ set palette defined ( 0 '#e6194B',\
 f(x)=a+b*x
 a = 1
 b = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20201231")] f(x) datafile u 1:2 via a,b
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20211231")] f(x) datafile u 1:2 via a,b
 
 g(x)= p+q*x
 p = 1
 q = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20201231")] g(x) recent u 1:2 via p,q	
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20211231")] g(x) recent u 1:2 via p,q	
 
 h(x)= r+s*x
 r = 1
 s = 1e-8
-fit [strptime("%Y%m%d","20200101"):strptime("%Y%m%d","20201231")] h(x) "walk.csv" u 1:3 via r,s
+fit [strptime("%Y%m%d","20210101"):strptime("%Y%m%d","20211231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 8 title "Weight" ,\
