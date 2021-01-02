@@ -28,7 +28,10 @@ foreach my $thing (@things) {
             print $walk;
             $total += $walk;
             $total = sprintf("%.2f", $total);
-            say "$delim$total";
+            print "$delim$total";
+	    if ($row =~ /Themis/)
+            { print $delim."with Themis"}
+	    print "\n";
         }
 
     }
