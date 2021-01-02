@@ -6,13 +6,13 @@ set key left
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20200101":"20201231"]
+set xrange ["20210101":"20211231"]
 set yrange [85:120]
 set y2range [-200:1600]
-set y2tics "-200", 100, "1400"
+set y2tics "-200", 100, "1600"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20200101",2592000, "20201231" 
+set xtics nomirror "20210101",2592000, "20211231" 
 set mxtics 4
 set ytics nomirror 
 
@@ -58,10 +58,12 @@ f(x) with lines ls 1 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 2 dt 3 title 'Recent Weight Trend' , \
 "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 1 title "Weight 2018", \
 "weight2019.csv"	       using 1:2 axes x1y1 with lines ls 2 title "Weight 2019", \
+"weight2020.csv"               using 1:2 axes x1y1 with lines ls 7 title "Weight 2020", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 3 title "Walk" , \
 "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 4 title "Walk 2018", \
 "walk2019.csv"		       using 1:3 axes x1y2 with lines ls 5 title "Walk 2019", \
-"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2020", \
+"walk2020.csv"                 using 1:3 axes x1y2 with lines ls 8 title "Walk 2020", \
+"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2021", \
 h(x) axes x1y2 with lines ls 7 dt 3 title "Walk Fit"
 
 t = sprintf ("%8.10f", s);
