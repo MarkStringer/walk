@@ -27,9 +27,11 @@ set style line 7 lt 1 lc rgb '#000075' # navy
 set style line 8 lt 1 lc rgb '#f032e6' # magenta
 set style line 9 lt 1 lc rgb '#00ff00' # greengreen
 set style line 10 lt 1 lc rgb '#00ff00' #redred
+set style line 11 lt 1 lc rgb '#0000ff' #blueblue
+
 
 # palette
-set palette maxcolors 10 
+set palette maxcolors 11 
 set palette defined ( 0 '#e6194B',\
     	    	      1 '#D95F02',\
 		      2 '#808000',\
@@ -39,7 +41,8 @@ set palette defined ( 0 '#e6194B',\
 		      6 '#000075',\
 		      7 '#f032e6',\
 		      8 '#00ff00',\
-                      9 '#ff0000' )
+                      9 '#ff0000',\
+                      10 '#0000ff')
 
 f(x)=a+b*x
 a = 1
