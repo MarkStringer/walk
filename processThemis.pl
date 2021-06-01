@@ -1,9 +1,6 @@
-use Cwd;
-use lib cwd;
 use strict;
 use warnings;
 use 5.010;
-use Days;
 
 my $file = 'preThemis.csv';
 my $total = 0;
