@@ -8,8 +8,8 @@ set format x "%d-%b-%y"
 set xdata time
 set xrange ["20210101":"20211231"]
 set yrange [85:120]
-set y2range [-200:1600]
-set y2tics "-200", 100, "1600"
+set y2range [-200:1800]
+set y2tics "-200", 100, "1800"
 set xtics font ", 16"
 set xtics rotate by 45 right
 set xtics nomirror "20210101",2592000, "20211231" 
