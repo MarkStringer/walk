@@ -63,13 +63,7 @@ plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 10 title "Weight" ,\
 f(x) with lines ls 1 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 2 dt 3 title 'Recent Weight Trend' , \
-## "weight2018.csv"	       using 1:2 axes x1y1 with lines ls 1 title "Weight 2018", \
-## "weight2019.csv"	       using 1:2 axes x1y1 with lines ls 2 title "Weight 2019", \
-## "weight2020.csv"               using 1:2 axes x1y1 with lines ls 7 title "Weight 2020", \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 3 title "Walk" , \
-## "walk2018.csv"		       using 1:3 axes x1y2 with lines ls 4 title "Walk 2018", \
-## "walk2019.csv"		       using 1:3 axes x1y2 with lines ls 5 title "Walk 2019", \
-## "walk2020.csv"                 using 1:3 axes x1y2 with lines ls 8 title "Walk 2020", \
 "themis.csv"                   using 1:3 axes x1y2 with lines ls 11 title "Themis walk 2021", \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2021", \
 "LinearTargetWeight.csv"       using 1:2 axes x1y1 with lines ls 8 dt 4 title "Weight Target 2021", \
