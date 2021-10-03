@@ -33,6 +33,20 @@ foreach my $thing (@things) {
             { print $delim."with Themis"}
 	    print "\n";
         }
+	if ( $row =~ /(\d+\.?\d*)\s+k.*/i ) {
+            my $walk = $1;
+	    $walk = $walk/1.6;
+            # print "$day\/$month\/$year$delim";
+            print $year.$month.$day.$delim;
+            print $walk;
+            $total += $walk;
+            $total = sprintf("%.2f", $total);
+            print "$delim$total";
+            if ($row =~ /Themis/)
+            { print $delim."with Themis"}
+            print "\n";
+        }
+
 
     }
 }
