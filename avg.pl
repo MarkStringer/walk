@@ -5,7 +5,7 @@ use warnings;
 use 5.010;
 
 my $last_line = `perl sort.pl | tail -n 1`;
-$last_line =~ /(\d+\.\d+)$/;
+$last_line =~ /(\d+\.\d+)\D+$/;
 my $distance = $1;
 
 my $distance_left = 1500 - $distance;
