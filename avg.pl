@@ -11,6 +11,7 @@ my $distance = $1;
 my $distance_left = 1500 - $distance;
 
 my $days_left = 365- `date +%j`;
+$days_left++; # the date command includes today
 
 my $average = $distance_left / $days_left;
 
