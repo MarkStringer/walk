@@ -59,7 +59,7 @@ r = 1
 s = 1e-8
 fit [strptime("%Y%m%d","20210101"):strptime("%Y%m%d","20211231")] h(x) "walk.csv" u 1:3 via r,s
 
-plot "walk.csv"                     using 1:3 axes x1y2 with lines ls 9 title "Walk" 
+plot "walk.csv"                     using 1:3 axes x1y2 with lines ls 1 title "Walk" 
 
 t = sprintf ("%8.10f", s);
 
