@@ -60,14 +60,7 @@ s = 1e-8
 fit [strptime("%Y%m%d","20210101"):strptime("%Y%m%d","20211231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
-"weight.csv"                   using 1:2 axes x1y1 with lines ls 1 title "Weight" ,\
-f(x) with lines ls 2 dt 3 title 'Expected Weight' , \
-g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
-"walk.csv"                     using 1:3 axes x1y2 with lines ls 10 title "Walk" , \
-"themis.csv"                   using 1:3 axes x1y2 with lines ls 5 title "Themis walk 2021", \
-"LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2021", \
-"LinearTargetWeight.csv"       using 1:2 axes x1y1 with lines ls 7 dt 4 title "Weight Target 2021", \
-h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit"
+"walk.csv"                     using 1:3 axes x1y2 with lines ls 1 title "Walk" 
 
 t = sprintf ("%8.10f", s);
 
