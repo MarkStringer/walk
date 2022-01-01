@@ -12,7 +12,7 @@ set y2range [-200:1800]
 set y2tics "-200", 100, "1800"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20210101",2592000, "20211231" 
+set xtics nomirror "20220101",2592000, "20221231" 
 set mxtics 4
 set ytics nomirror 
 
@@ -47,17 +47,17 @@ set palette defined ( 0 '#e6194B',\
 f(x)=a+b*x
 a = 1
 b = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20211231")] f(x) datafile u 1:2 via a,b
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20221231")] f(x) datafile u 1:2 via a,b
 
 g(x)= p+q*x
 p = 1
 q = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20211231")] g(x) recent u 1:2 via p,q	
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20221231")] g(x) recent u 1:2 via p,q	
 
 h(x)= r+s*x
 r = 1
 s = 1e-8
-fit [strptime("%Y%m%d","20210101"):strptime("%Y%m%d","20211231")] h(x) "walk.csv" u 1:3 via r,s
+fit [strptime("%Y%m%d","20220101"):strptime("%Y%m%d","20221231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 1 title "Weight" ,\
