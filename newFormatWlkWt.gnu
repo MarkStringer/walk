@@ -6,7 +6,7 @@ set key left
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20210101":"20211231"]
+set xrange ["20220101":"20221231"]
 set yrange [85:120]
 set y2range [-200:1800]
 set y2tics "-200", 100, "1800"
