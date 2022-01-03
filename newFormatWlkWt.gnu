@@ -54,9 +54,9 @@ p = 1
 q = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20221231")] g(x) recent u 1:2 via p,q	
 
-h(x)= s*x+r+1e-9
+h(x)= s*x+r
 r = 1
-s = -11
+s = 0 
 fit [strptime("%Y%m%d","20220101"):strptime("%Y%m%d","20221231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
