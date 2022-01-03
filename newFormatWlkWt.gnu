@@ -57,7 +57,7 @@ fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20221231")] g(x) recent u 
 h(x)= r+s*x
 r = 1
 s = 1e-8
-fit [strptime("%Y%m%d","20210101"):strptime("%Y%m%d","20221231")] h(x) "walk.csv" u 1:3 via r,s
+fit [strptime("%Y%m%d","20220101"):strptime("%Y%m%d","20221231")] h(x) "walk.csv" u 1:3 via r,s
 
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 1 title "Weight" ,\
