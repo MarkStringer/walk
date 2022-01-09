@@ -54,7 +54,7 @@ p = 1
 q = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20221231")] g(x) recent u 1:2 via p,q	
 
-h(x)= s*x+r
+h(x)= r+s*x 
 r = 1
 s = 0.1 
 fit [strptime("%Y%m%d","20220101"):strptime("%Y%m%d","20221231")] h(x) clean u 1:2 via r,s
