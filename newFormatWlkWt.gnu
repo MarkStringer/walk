@@ -44,6 +44,7 @@ set palette defined ( 0 '#e6194B',\
                       9 '#ff0000',\
                       10 '#0000ff')
 
+
 f(x)=a+b*x
 a = 1
 b = 1e-8
