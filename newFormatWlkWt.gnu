@@ -16,7 +16,7 @@ set xtics nomirror "20220101",2592000, "20221231"
 set mxtics 4
 set ytics nomirror 
 
-set label "U+1F967" at "20220630", 100
+set label "\U+1F967" at "20220630", 100
 
 # line styles
 set style line 1 lt 1 lc rgb '#e6194B' # red
