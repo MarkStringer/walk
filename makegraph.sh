@@ -16,4 +16,4 @@ fi
 ./commit.sh
 cd ../Mark*
 ./commit.sh
-termux-open https://MarkStringer.github.io/assets/file.png
+termux-open https://MarkStringer.github.io
