@@ -11,6 +11,6 @@ if [[ "$key" =~ ^([nN]+$) ]]
 then
 	exit 0
 else
-	ffx file.svg&	
+	cp file.png ../MarkStringer/assets
 fi
 ./commit.sh
