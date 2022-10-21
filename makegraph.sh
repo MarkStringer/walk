@@ -14,3 +14,6 @@ else
 	cp file.png ../MarkStringer.github.io/assets/ 
 fi
 ./commit.sh
+cd ../Mark*
+./commit.sh
+termux-open https://MarkStringer.github.io/assets/file.png
