@@ -9,11 +9,6 @@ gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 read -n1 -r -p "Show Graph? [Y]/N" key
 if [[ "$key" =~ ^([nN]+$) ]]
 then
-	exit 0
-else
-	cp file.png ../MarkStringer.github.io/assets/ 
+    ffx file.svg	
 fi
 ./commit.sh
-cd ../Mark*
-./commit.sh
-termux-open https://MarkStringer.github.io
