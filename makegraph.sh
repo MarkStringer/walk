@@ -9,6 +9,8 @@ gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 read -n1 -r -p "Show Graph? [Y]/N" key
 if [[ "$key" =~ ^([nN]+$) ]]
 then
-    ffx file.svg	
+	exit 0
+else
+	ffx file.svg&	
 fi
 ./commit.sh
