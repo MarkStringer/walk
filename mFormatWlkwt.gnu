@@ -1,4 +1,4 @@
-set terminal png enhanced size 800,600
+set terminal png enhanced size 1600,1200
 set output 'file.png'
 set title "Actual Progress" font "Serif,32"
 
