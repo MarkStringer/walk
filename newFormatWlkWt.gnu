@@ -1,4 +1,4 @@
-set terminal png enhanced size 800,600
+set terminal svg enhanced size 800,600
 set output 'file.svg'
 set title "Actual Progress" font "Serif,32"
 
