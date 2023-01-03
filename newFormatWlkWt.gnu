@@ -6,13 +6,13 @@ set key left
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20220101":"20221231"]
+set xrange ["20230101":"20231231"]
 set yrange [85:120]
 set y2range [-200:1800]
 set y2tics "-200", 100, "1800"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20220101",2592000, "20221231" 
+set xtics nomirror "20230101",2592000, "20231231" 
 set mxtics 4
 set ytics nomirror 
 
