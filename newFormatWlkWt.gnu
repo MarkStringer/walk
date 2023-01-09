@@ -69,7 +69,7 @@ g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2023", \
 "LinearTargetWeight.csv"       using 1:2 axes x1y1 with lines ls 7 dt 4 title "Weight Target 2023", \
 h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit"
-plot [-5:5] (sin(1/x) - cos(x))*erfc(x)
+plot [strptime("%Y%m%d","20230101"):strptime("%Y%m%d","20231231")] (sin(1/x) - cos(x))*erfc(x) axes x1y1
 
 t = sprintf ("%8.10f", s);
 
