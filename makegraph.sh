@@ -11,6 +11,6 @@ if [[ "$key" =~ ^([nN]+$) ]]
 then
 	exit 0
 else
-	ffx "\\wsl.localhost\Ubuntu-22.04\home\mark\projects\walk"&	
+	ffx "file://///wsl$/Ubuntu-22.04/home/mark/projects/walk/file.svg"&	
 fi
 ./commit.sh
