@@ -11,6 +11,6 @@ if [[ "$key" =~ ^([nN]+$) ]]
 then
 	exit 0
 else
-	eval "ffx $GRAPH_PATH"&	
+	ffx 'file:///home/mark/projects/walk/file.svg'&	
 fi
 ./commit.sh
