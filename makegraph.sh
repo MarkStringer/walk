@@ -11,7 +11,7 @@ if [[ "$key" =~ ^([nN]+$) ]]
 then
 	exit 0
 else
-	echo $GRAPH_PATH
-	ffx "$GRAPH_PATH"&	
+	echo "${GRAPH_PATH}"
+	ffx "${GRAPH_PATH}"&	
 fi
 ./commit.sh
