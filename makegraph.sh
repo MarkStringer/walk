@@ -8,6 +8,7 @@ fi
 
 perl sort.pl > walk.csv
 tail -n 7 weight.csv > recent.csv
+tail -n 7 walk.csv > recentWalk.csv
 ##perl sort.pl | grep Themis > preThemis.csv
 ##perl processThemis.pl > themis.csv
 gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
