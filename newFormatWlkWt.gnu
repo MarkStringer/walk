@@ -71,7 +71,7 @@ plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 1 title "Weight" ,\
 f(x) with lines ls 2 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
-i(x) with lines ls 4 dt 3 title 'Recent Walk Trent', \
+i(x) axes x1y2 with lines ls 4 dt 3 title 'Recent Walk Trend', \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 11 title "Walk" , \
 h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit"
 
