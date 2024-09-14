@@ -60,10 +60,18 @@ r = 1
 s = 1e-8 
 fit [strptime("%Y%m%d","20240101"):strptime("%Y%m%d","20241231")] h(x) "walk.csv" u 1:3 via r,s
 
+i(x)= j+k*x
+j = 1
+k = 1e-8
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] i(x) @walkRecent.csv@ u 1:2 via p,q
+
+
+
 plot \
 "weight.csv"                   using 1:2 axes x1y1 with lines ls 1 title "Weight" ,\
 f(x) with lines ls 2 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
+i(x) with lines ls 4 dt 3 title 'Recent Walk Trent', \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 11 title "Walk" , \
 "LinearTarget.csv"	       using 1:2 axes x1y2 with lines ls 6 dt 3 title "Target 2024", \
 "LinearTargetWeight.csv"       using 1:2 axes x1y1 with lines ls 7 dt 4 title "Weight Target 2024", \
