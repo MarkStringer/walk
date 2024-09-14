@@ -63,7 +63,7 @@ fit [strptime("%Y%m%d","20240101"):strptime("%Y%m%d","20241231")] h(x) "walk.csv
 i(x)= j+k*x
 j = 1
 k = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] i(x) @walkRecent.csv@ u 1:2 via p,q
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] i(x) "walkRecent.csv" u 1:2 via j,k
 
 
 
