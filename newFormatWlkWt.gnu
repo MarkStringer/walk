@@ -6,13 +6,13 @@ set key left
 set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
-set xrange ["20240101":"20241231"]
+set xrange ["20250101":"20251231"]
 set yrange [85:120]
 set y2range [-200:1800]
 set y2tics "-200", 100, "1800"
 set xtics font ", 16"
 set xtics rotate by 45 right
-set xtics nomirror "20240101",2592000, "20241231" 
+set xtics nomirror "20250101",2592000, "20251231" 
 set mxtics 4
 set ytics nomirror 
 
@@ -48,22 +48,22 @@ set palette defined ( 0 '#e6194B',\
 f(x)=a+b*x
 a = 1
 b = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] f(x) datafile u 1:2 via a,b
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20251231")] f(x) datafile u 1:2 via a,b
 
 g(x)= p+q*x
 p = 1
 q = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] g(x) recent u 1:2 via p,q	
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20251231")] g(x) recent u 1:2 via p,q	
 
 h(x)= r+s*x
 r = 1
 s = 1e-8 
-fit [strptime("%Y%m%d","20240101"):strptime("%Y%m%d","20241231")] h(x) "walk.csv" u 1:3 via r,s
+fit [strptime("%Y%m%d","20250101"):strptime("%Y%m%d","20251231")] h(x) "walk.csv" u 1:3 via r,s
 
 i(x)= j+k*x
 j = 1
 k = 1e-8
-fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20241231")] i(x) "recentWalk.csv" u 1:3 via j,k
+fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20251231")] i(x) "recentWalk.csv" u 1:3 via j,k
 
 
 
