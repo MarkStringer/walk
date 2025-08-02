@@ -18,6 +18,6 @@ read -n1 -r -p "Show Graph? [Y]/N: " key
 if [[ "$key" =~ ^([nN]+$) ]]; then
     exit 0
 else
-    ffx "file://${GRAPH_PATH}" &
+    ffx "file://${GRAPH_PATH}/file.svg" &
 fi
 ./commit.sh
