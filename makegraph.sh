@@ -1,4 +1,5 @@
 #! /usr/bin/bash
+GRAPH_PATH=/home/mark/progects/walk
 
 # Check if GRAPH_PATH environment variable is set
 if [[ -z "${GRAPH_PATH}" ]]; then
