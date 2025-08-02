@@ -21,4 +21,3 @@ else
     ffx "file://${GRAPH_PATH}" &
 fi
 ./commit.sh
-
