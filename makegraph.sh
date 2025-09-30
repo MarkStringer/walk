@@ -12,12 +12,12 @@ tail -n 7 weight.csv > recent.csv
 tail -n 7 walk.csv > recentWalk.csv
 ##perl sort.pl | grep Themis > preThemis.csv
 ##perl processThemis.pl > themis.csv
-##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
+gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_2026.gnu
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_weight_target_coloured.gnu
-today=$(date +%Y%m%d);
-last_weight=$(awk -F'\t' 'END {print $2}' weight.csv);
-gnuplot -e "datafile='weight.csv';recent='recent.csv'; last_weight='${last_weight}'; last_date='${today}'"  newFormatWlkWt_weight_target_args.gnu
+##today=$(date +%Y%m%d);
+##last_weight=$(awk -F'\t' 'END {print $2}' weight.csv);
+##gnuplot -e "datafile='weight.csv';recent='recent.csv'; last_weight='${last_weight}'; last_date='${today}'"  newFormatWlkWt_weight_target_args.gnu
 
 
 
