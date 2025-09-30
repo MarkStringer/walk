@@ -13,7 +13,10 @@ tail -n 7 walk.csv > recentWalk.csv
 ##perl sort.pl | grep Themis > preThemis.csv
 ##perl processThemis.pl > themis.csv
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
-gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_2026.gnu 
+##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_2026.gnu
+gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_weight_target_coloured.gnu
+
+
 
 # show the graph
 read -n1 -r -p "Show Graph? [Y]/N: " key
