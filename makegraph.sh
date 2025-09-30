@@ -15,7 +15,8 @@ tail -n 7 walk.csv > recentWalk.csv
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_2026.gnu
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_weight_target_coloured.gnu
-gnuplot -e "datafile='weight.csv';recent='recent.csv'; last_weight=117.8; last_date='20250930'"  newFormatWlkWt_weight_target_args.gnu
+today=$(date +%Y%m%d);
+gnuplot -e "datafile='weight.csv';recent='recent.csv'; last_weight=117.8; last_date='${today}'"  newFormatWlkWt_weight_target_args.gnu
 
 
 
