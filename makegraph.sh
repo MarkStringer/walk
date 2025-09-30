@@ -14,7 +14,8 @@ tail -n 7 walk.csv > recentWalk.csv
 ##perl processThemis.pl > themis.csv
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt.gnu
 ##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_2026.gnu
-gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_weight_target_coloured.gnu
+##gnuplot -e "datafile='weight.csv';recent='recent.csv'" newFormatWlkWt_weight_target_coloured.gnu
+gnuplot -e "last_weight=92.5; last_date='20250930'"  newFormatWlkWt_weight_target_args.gnu
 
 
 
