@@ -45,6 +45,7 @@ set palette defined ( 0 '#e6194B',\
                       10 '#0000ff')
 
 
+
 f(x)=a+b*x
 a = 1
 b = 1e-8
@@ -65,6 +66,7 @@ j = 1
 k = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20251231")] i(x) "recentWalk.csv" u 1:3 via j,k
 
+j(x)=1460*(x - strptime("%Y%m%d","20250101"))/(strptime("%Y%m%d","20251231") - strptime("%Y%m%d","20250101"))
 
 
 plot \
@@ -73,7 +75,9 @@ f(x) with lines ls 2 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
 i(x) axes x1y2 with lines ls 5 dt 3 title 'Recent Walk Trend', \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 11 title "Walk" , \
-h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit"
+h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit", \
+j(x) axes x1y2 with lines lt 1 dt 2 title "Target Walk"
+
 
 t = sprintf ("%8.10f", s);
 
