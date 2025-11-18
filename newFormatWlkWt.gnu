@@ -73,8 +73,7 @@ f(x) with lines ls 2 dt 3 title 'Expected Weight' , \
 g(x) with lines ls 3 dt 3 title 'Recent Weight Trend' , \
 i(x) axes x1y2 with lines ls 5 dt 3 title 'Recent Walk Trend', \
 "walk.csv"                     using 1:3 axes x1y2 with lines ls 11 title "Walk" , \
-h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit", \
- j(x) axes x1y2 with lines ls 9 dt 2 title "Annual Target"
+h(x) axes x1y2 with lines ls 8 dt 3 title "Walk Fit"
 
 t = sprintf ("%8.10f", s);
 
