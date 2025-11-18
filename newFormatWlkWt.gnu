@@ -65,6 +65,7 @@ j = 1
 k = 1e-8
 fit [strptime("%Y%m%d","20180101"):strptime("%Y%m%d","20251231")] i(x) "recentWalk.csv" u 1:3 via j,k
 
+plot j(x)=1460*(x - strptime("%Y%m%d","20250101"))/(strptime("%Y%m%d","20251231") - strptime("%Y%m%d","20250101")) axes x1y2 with lines lt 1 dt 2 title "Target Walk"
 
 
 plot \
