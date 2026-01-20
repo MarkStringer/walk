@@ -7,7 +7,7 @@ set timefmt "%Y%m%d"
 set format x "%d-%b-%y"
 set xdata time
 set xrange ["20250101":"20251231"]
-set yrange [85:120]
+set yrange [85:130]
 set y2range [-200:1800]
 set y2tics "-200", 100, "1800"
 set xtics font ", 16"
