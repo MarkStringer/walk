@@ -28,7 +28,7 @@ cat > "$HTML" <<ENDHTML
   <style>
     body { font-family: sans-serif; background: #fff; color: #000; margin: 0; padding: 1em; }
     h2   { margin-top: 1.5em; }
-    img  { width: 100%; display: block; }
+    img  { width: 80%; display: block; }
   </style>
 </head>
 <body>
